@@ -1,0 +1,7 @@
+require('settings')
+require('autocmd')
+require('plugins')
+require('keybinds')
+require('plugins_config.init')
+require('lsp.init')
+require('cmp')
