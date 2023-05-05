@@ -19,7 +19,7 @@ return require('packer').startup(function(use)
   use 'Mofiqul/dracula.nvim'
   use 'nvim-treesitter/nvim-treesitter'
   use 'nvim-tree/nvim-web-devicons'
-  use 'nvim-lualine/lualine.nvim'
+  use 'nvim-lualine/lualine.nvim' 
 -- LSP
   use 'neovim/nvim-lspconfig'
   use {
@@ -44,6 +44,12 @@ return require('packer').startup(function(use)
         "nvim-telescope/telescope.nvim"
       }
   })
+-- Translator
+  use {
+    "niuiic/translate.nvim",
+    "niuiic/niuiic-core.nvim"
+  }
+
   -- My plugins here
   -- use 'foo1/bar1.nvim'
   -- use 'foo2/bar2.nvim'
