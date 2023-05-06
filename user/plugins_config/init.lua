@@ -1,0 +1,7 @@
+require("user.plugins_config.dracula")
+require("user.plugins_config.lualine")
+require("user.plugins_config.nvim-tree")
+require("user.plugins_config.telescope")
+require("user.plugins_config.treesitter")
+require("user.plugins_config.translate")
+require("user.plugins_config.chatgpt")
