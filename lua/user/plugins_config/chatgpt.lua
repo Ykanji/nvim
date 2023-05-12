@@ -1,4 +1,5 @@
 require("chatgpt").setup({
+  api_key_cmd = "gpg --decrypt ~/.config/nvim/lua/user/plugins_config/secret.txt.gpg 2>/dev/null",
   {
     yank_register = "+",
     edit_with_instructions = {
@@ -12,7 +13,7 @@ require("chatgpt").setup({
       },
     },
     chat = {
-      welcome_message = WELCOME_MESSAGE,
+      welcome_message = "WELCOME_MESSAGE",
       loading_text = "Loading, please wait ...",
       question_sign = "", -- 🙂
       answer_sign = "ﮧ", -- 🤖

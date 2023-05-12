@@ -40,6 +40,7 @@ packer.init({
 
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
+  use { "nvim-lua/plenary.nvim" }
 --tree
   use 'nvim-tree/nvim-tree.lua'
 -- Themes, line, syntax highlighting, icons
@@ -47,6 +48,21 @@ return require('packer').startup(function(use)
   use 'nvim-treesitter/nvim-treesitter'
   use 'kyazdani42/nvim-web-devicons'
   use 'nvim-lualine/lualine.nvim'
+  use "akinsho/toggleterm.nvim"
+  use "numToStr/Comment.nvim"
+  use {
+    'goolord/alpha-nvim',
+    requires = { 'nvim-tree/nvim-web-devicons' },
+    config = function ()
+        require'alpha'.setup(require'alpha.themes.startify'.config)
+    end
+  }
+-- EasyMotion
+  use {
+    'phaazon/hop.nvim',
+    branch = 'v2', -- optional but strongly recommended
+  }
+  use 'ziontee113/syntax-tree-surfer'
 --CMP
   use { "hrsh7th/nvim-cmp" } -- The completion plugin
   use { "hrsh7th/cmp-buffer" } -- buffer completions
@@ -54,6 +70,7 @@ return require('packer').startup(function(use)
   use { "saadparwaiz1/cmp_luasnip" } -- snippet completions
   use { "hrsh7th/cmp-nvim-lsp" }
   use { "hrsh7th/cmp-nvim-lua" }
+   use { "windwp/nvim-autopairs" }
   	-- Snippets
   use { "L3MON4D3/LuaSnip" } --snippet engine
   use { "rafamadriz/friendly-snippets" } -- a bunch of snippets to use
@@ -91,6 +108,11 @@ return require('packer').startup(function(use)
   }
 -- Git
   use { "lewis6991/gitsigns.nvim" }
+
+-- Degug
+  use 'mfussenegger/nvim-dap'
+  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+  use 'mfussenegger/nvim-dap-python'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

@@ -4,5 +4,4 @@ end
 
 map('n', '<leader>nh', ':nohlsearch<CR>')
 map('n', '<leader>rc', ':luafile %<CR>')
-map('n', '<leader>t', ':stop<CR>')
 map('n', '<Leader>rc', ':source %<cr>')

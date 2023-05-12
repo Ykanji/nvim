@@ -55,7 +55,7 @@ require("translate").setup({
 				}
 			end,
 			input = "input",
-			output = { "float_win" },
+			output = { "notify" },
 		},
 	},
 })

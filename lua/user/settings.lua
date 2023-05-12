@@ -7,9 +7,12 @@ o.nocompatible = true
 o.noswapfile = true
 o.encoding = 'UTF-8'
 o.fileencodings = 'utf-8'
+o.conceallevel = 0
 o.hlsearch = true
 o.incsearch = true
+o.ignorecase = true
 o.wrap = true
+o.clipboard = 'unnamedplus'
 
 -- Tabs settings
 o.expandtab = true
