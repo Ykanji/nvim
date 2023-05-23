@@ -1,0 +1,35 @@
+require('dap-python').setup('/usr/sbin/python')
+table.insert(require('dap').configurations.python, {
+  type = 'python',
+  request = 'launch',
+  name = 'My custom launch configuration',
+  program = '${file}',
+  -- ... more options, see https://github.com/microsoft/debugpy/wiki/Debug-configuration-settings
+})
+
+local keymap = vim.keymap.set
+"<cmd>lua vim.lsp.buf.declaration()<CR>"
+keymap("n", "<leader>n", "<cmd>lua require'dap'.continue()<CR>")
+keymap("n", "<leader>so", "<cmd>lua require'dap'.step_over()")
+keymap("n", "<leader>so", "<cmd>lua require'dap'.setp_into()")
+keymap("n", "<leader>so", "<cmd>lua require'dap'.setp_out()")
+keymap("n", "<leader>b", "<cmd>lua require'dap'.toggle_breakpoint()")
+keymap("n", "<leader>B", "<cmd>lua require'dap'.set_breakpoint()")
+keymap("n", "<Leader>lp", function()
+	require("dap").set_breakpoint(nil, nil, vim.fn.input("Log point message: "))
+end)
+keymap("n", "<leader>dr", "<cmd>lua require'dap'.repl.open()")
+keymap("n", "<leader>dl", "<cmd>lua require'dap'.run_last()")
+keymap({ "n", "v" }, "<leader>dh", "<cmd>lua require'dap'.hover()")
+keymap({ "n", "v" }, "<leader>dp", "<cmd>lua require'dap'.preview()")
+keymap("n", "<Leader>df", function()
+	local widgets = require("dap.ui.widgets")
+	widgets.centered_float(widgets.frames)
+end)
+keymap("n", "<Leader>ds", function()
+	local widgets = require("dap.ui.widgets")
+	widgets.centered_float(widgets.scopes)
+end)
+keymap("n", "<leader>tm", "<cmd>lua require'dap-python'.test_method()")
+keymap("n", "<leader>tc", "<cmd>lua require'dap-python'.test_class()")
+keymap("n", "<leader>dc", "<cmd>lua require'dap-python'.debug_selection()")

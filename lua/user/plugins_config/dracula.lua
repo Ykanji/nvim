@@ -26,7 +26,7 @@ dracula.setup({
     nontext = "#3B4048",
   },
   -- show the '~' characters after the end of buffers
-  show_end_of_buffer = true, -- default false
+  show_end_of_buffer = false, -- default false
   -- use transparent background
   transparent_bg = true, -- default false
   -- set custom lualine background color

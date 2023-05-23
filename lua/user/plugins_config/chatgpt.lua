@@ -1,6 +1,6 @@
 require("chatgpt").setup({
-  api_key_cmd = "gpg --decrypt ~/.config/nvim/lua/user/plugins_config/secret.txt.gpg 2>/dev/null",
   {
+    api_key_cmd = "gpg --decrypt ~/.config/nvim/lua/user/plugins_config/secret.txt.gpg 2>/dev/null",
     yank_register = "+",
     edit_with_instructions = {
       diff = false,
@@ -100,7 +100,7 @@ require("chatgpt").setup({
       n = 1,
     },
     openai_edit_params = {
-      model = "code-davinci-edit-001",
+      model = "code-davinci-edit-002",
       temperature = 0,
       top_p = 1,
       n = 1,

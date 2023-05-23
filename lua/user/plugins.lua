@@ -48,7 +48,9 @@ return require('packer').startup(function(use)
   use 'nvim-treesitter/nvim-treesitter'
   use 'kyazdani42/nvim-web-devicons'
   use 'nvim-lualine/lualine.nvim'
+  use 'akinsho/bufferline.nvim'
   use "akinsho/toggleterm.nvim"
+  use { "windwp/nvim-autopairs" }
   use "numToStr/Comment.nvim"
   use {
     'goolord/alpha-nvim',
@@ -70,7 +72,6 @@ return require('packer').startup(function(use)
   use { "saadparwaiz1/cmp_luasnip" } -- snippet completions
   use { "hrsh7th/cmp-nvim-lsp" }
   use { "hrsh7th/cmp-nvim-lua" }
-   use { "windwp/nvim-autopairs" }
   	-- Snippets
   use { "L3MON4D3/LuaSnip" } --snippet engine
   use { "rafamadriz/friendly-snippets" } -- a bunch of snippets to use
@@ -113,6 +114,9 @@ return require('packer').startup(function(use)
   use 'mfussenegger/nvim-dap'
   use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
   use 'mfussenegger/nvim-dap-python'
+  use 'nvim-neotest/neotest'
+  use 'nvim-neotest/neotest-python'
+
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
